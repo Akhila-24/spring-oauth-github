@@ -1,0 +1,19 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Ov23liivrXEczKM5PMOE
+            client-secret: 6b06e585a63412d9c4a5d96983fa4939a04ddbe3
+            scope:
+              - user:email
+            redirect-uri: "http://localhost:8080/login/oauth2/code/github"
+        provider:
+          github:
+            authorization-uri: https://github.com/login/oauth/authorize
+            token-uri: https://github.com/login/oauth/access_token
+            user-info-uri: https://api.github.com/user
+            user-name-attribute: id
+  application:
+    name: oauth-tube
